@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string.h>
+#include <math.h>
 using namespace std;
 int llenarpalabra(char w[], int lw)
 {
@@ -71,9 +72,45 @@ int longitud(char w2[])
   return 0;
 }
 
+int evaluar(char w1[],int lw1,char simbolo)
+{
+  int sumador=0;
+  for(int i=0;i<lw1;i++)
+  {
+    if(w1[i]==simbolo)
+    {
+      sumador++;
+    }
+  }
+  cout<<"El valor de x es: " <<sumador <<endl;
+  return 0;
+}
+
+int potenciar(char w2[],int lw2,int pote)
+{
+    int res;
+    res=pow(lw2,pote);
+    char potencia[res];
+    int l=0;
+    for(int i=0;i<res;i++)
+    {
+      potencia[i]=w2[l];
+      l++;
+      if(l==lw2)
+      {
+        l=0;
+      }
+    }
+    for(int j=0;j<res;j++)
+    {
+      cout<<potencia[j];
+    }
+    return 0;
+}
+
 int main ()
 {
-  int labc,opc,nalfabeto,lw1,lw2,rep;
+  int labc,opc,nalfabeto,lw1,lw2,rep,pot;
   cout<<"De cuantas letras desea generar su alfabeto: " <<endl;
   cin>>nalfabeto;
   //definimos el alfabeto
@@ -101,6 +138,7 @@ int main ()
   cin>>lw1;
   char w1[lw1];
   //llenado de la palabra 1
+  cout<<"ingresa la palabra sin espacios y utilizando simbolos del alfabeto." <<endl;
   llenarpalabra(w1,lw1);
   //mostramos la palabra
   cout<<"La palabra 1 es: ";
@@ -114,6 +152,7 @@ int main ()
   cin>>lw2;
   char w2[lw2];
   //llenamos la palabra 2
+  cout<<"ingresa la palabra sin espacios y utilizando simbolos del alfabeto." <<endl;
   llenarpalabra(w2,lw2);
   //mostramos la palabra 2
   cout<<"La palabra 2 es: ";
@@ -126,4 +165,11 @@ int main ()
   cout<<"La concatenacion de la cadena w1 y la cadena w2 es: " <<endl;
   concatenar(w1,w2,lw1,lw2);
   longitud(w2);
+  char simbolo;
+  cout<<"Ingrese el simbolo sobre el cual evaluaremos la palabra: " <<endl;
+  cin>>simbolo;
+  evaluar(w1,lw1,simbolo);
+  cout<<"Ingrese la potencia a la que quiere elevar la palabra: " <<endl;
+  cin>>pot;
+  potenciar(w2,lw2,pot);
 }
