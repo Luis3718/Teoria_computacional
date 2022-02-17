@@ -1,3 +1,10 @@
+/*
+  Instituto Politécnico Nacional
+  ESCOM
+  Alvarado Romero Luis Manuel
+  Materia:Teoria de la computacion
+  Grupo: 4CV5
+*/
 #include <iostream>
 #include <string.h>
 #include <math.h>
