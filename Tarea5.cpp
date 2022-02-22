@@ -28,7 +28,7 @@ int imprimiralfabeto(char abc[],int nalfabeto)
 }
 int main ()
 {
-  int nalfabeto;
+  int nalfabeto,potencia;
   cout<<"De cuantas letras desea generar su alfabeto: " <<endl;
   cin>>nalfabeto;
   //definimos el alfabeto
@@ -40,6 +40,21 @@ int main ()
     cin>>abc[i];
   }
   imprimiralfabeto(abc,nalfabeto);
-  return 0;
+  cout<<"\nA que potencia desea elevar el alfabeto: ";
+  cin>>potencia;
+  int res,res2;
+  res=pow(nalfabeto,potencia);
+  res2=res*nalfabeto;
+  cout<<"La nueva longitud es: " <<res2 <<endl;
+  char alfabetopot[res2];
+  for(int i=0;i<res2;i++) //4
+  //aqui situamos el indice del alfabeto potenciado
+  {
+    for(int j=0;j<algo;j++)
+    {
 
+    }
+  }
+  imprimiralfabeto(alfabetopot,res2);
+  return 0;
 }
