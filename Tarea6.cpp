@@ -85,26 +85,6 @@ int main ()
     }
   }
   cout<<"}" <<endl;
-  /*
-  strcat(l1[0],l2[0]);
-  for(int i=0;i<lon1;i++)
-  {
-    for(int j=0;j<lon2;j++)
-    {
-      strcat(l3[i],l2[j]);
-    }
-  }
-  cout<<"L1= {";
-  for(int i=0;i<lon1;i++)
-  {
-    cout<<l1[i];
-    if(i<lon1-1)
-    {
-      cout<<", ";
-    }
-  }
-  cout<<"}" <<endl;
-  */
   cout<<"La union de L1 y L2 es: " <<endl;
   char l3[lon1+lon2][20];
   int k=0;
@@ -127,38 +107,6 @@ int main ()
   }
   cout<<"}" <<endl;
   cout<<"La concatenacion de L1 con L2 es: " <<endl;
-  /*int pot;
-  //hasta ahora solo sirve para potencias 2
-  cout<<"Ingrese la potencia del lenguaje" <<endl;
-  cin>>pot;
-  int res=pow(lon1,pot);
-  cout<<res <<endl;
-  char l4[pot][50];
-  //for(int i=0;i<res;i++)
-  //{
-  int o=0;
-  for(int j=0;j<lon1;j++)
-  {
-    for(int k=0;k<lon1;k++)
-    {
-      strcpy(palabras,l1[j]);
-      strcat(palabras,l1[k]);
-      strcpy(l4[o],palabras);
-      strcpy(palabras,vacio);
-      o++;
-    }
-  }
-  //}
-  cout<<"L4= {";
-  for(int i=0;i<res;i++)
-  {
-    cout<<l4[i];
-    if(i<(res)-1)
-    {
-      cout<<", ";
-    }
-  }
-  cout<<"}" <<endl;*/
   int r=lon1*lon2;
   char l5[r][50];
   char palabras[50];
@@ -180,6 +128,38 @@ int main ()
   {
     cout<<l5[i];
     if(i<(r)-1)
+    {
+      cout<<", ";
+    }
+  }
+  cout<<"}" <<endl;
+  int pot;
+  //hasta ahora solo sirve para potencias 2
+  cout<<"Ingrese la potencia del lenguaje" <<endl;
+  cin>>pot;
+  int res=pow(lon1,pot);
+  cout<<res <<endl;
+  char l4[pot][50];
+  //for(int i=0;i<res;i++)
+  //{
+  o=0;
+  for(int j=0;j<lon1;j++)
+  {
+    for(int k=0;k<lon1;k++)
+    {
+      strcpy(palabras,l1[j]);
+      strcat(palabras,l1[k]);
+      strcpy(l4[o],palabras);
+      strcpy(palabras,vacio);
+      o++;
+    }
+  }
+  //}
+  cout<<"L4= {";
+  for(int i=0;i<res;i++)
+  {
+    cout<<l4[i];
+    if(i<(res)-1)
     {
       cout<<", ";
     }
